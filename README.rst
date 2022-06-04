@@ -48,13 +48,13 @@ The following commands are currently the valid ways of installing WaveLink.
 
 .. code:: sh
 
-    py -3.9 -m pip install -U git+https://github.com/CanasDev/Disnake-Wavelink
+    py -3.9 -m pip install -U git+https://github.com/hookSSi/Disnake-Wavelink
 
 **Linux**
 
 .. code:: sh
 
-    python3.9 -m pip install -U git+https://github.com/CanasDev/Disnake-Wavelink
+    python3.9 -m pip install -U git+https://github.com/hookSSi/Disnake-Wavelink
 
 Getting Started
 ----------------------------
