@@ -218,7 +218,7 @@ class SearchableTrack(Track, Searchable):
         return results[0]
 
 
-class YouTubeTrack(YouTubeTrack):
+class YouTubeTrack(SearchableTrack):
     """A track created using a search to YouTube."""
 
     _search_type: ClassVar[str] = "ytsearch"
@@ -231,7 +231,7 @@ class YouTubeTrack(YouTubeTrack):
     thumb = thumbnail
 
 
-class YouTubeMusicTrack(SearchableTrack):
+class YouTubeMusicTrack(YouTubeTrack):
     """A track created using a search to YouTube Music."""
 
     _search_type: ClassVar[str] = "ytmsearch"
