@@ -156,6 +156,10 @@ class Websocket:
             event, payload = await self._get_event_payload(data['type'], data)
             logger.debug(f'op: event:: {data}')
 
+            # https://github.com/PythonistaGuild/Wavelink/issues/156
+            if event == 'track_end' and payload.get('reason') != 'REPLACED':
+                player._source = None
+
             self.dispatch(event, player, **payload)
 
         elif op == "playerUpdate":
